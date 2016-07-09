@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Sliding Menu like Facebook</string>
+    <string name="demo">This is Demo of making Sliding menu like Facebook application</string>
+
+    <string-array name="right_menu">
+        <item>MainLayout</item>
+        <item>Button</item>
+        <item>TextView</item>
+        <item>ImageView</item>
+        <item>Switch</item>
+        <item>CheckBox</item>
+        <item>RadioGroup</item>
+        <item>SeekBar</item>
+    </string-array>
+</resources>
