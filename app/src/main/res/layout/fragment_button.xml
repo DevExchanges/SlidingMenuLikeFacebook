@@ -2,15 +2,13 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:padding="@dimen/activity_horizontal_margin">
 
-    <android.support.v7.widget.SwitchCompat
-        android:layout_width="wrap_content"
-        app:switchPadding="@dimen/activity_horizontal_margin"
+    <Button
+        android:id="@+id/btn_go"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:text="Switch Compat"
-        android:textOff="OFF"
-        android:textOn="ON" />
+        android:text="Go to other Activity" />
 
 </RelativeLayout>

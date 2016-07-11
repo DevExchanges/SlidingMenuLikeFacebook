@@ -47,9 +47,7 @@ public class MainActivity extends AppCompatActivity {
 
         //Setting Content Layout
         slidingMenu.setContentView(R.layout.activity_main);
-
         slidingMenu.setRightShadow(R.drawable.shadow_right);
-        slidingMenu.setLeftShadow(R.drawable.shadow_left);
 
         //Setting the right menu
         rightMenuView = getLayoutInflater().inflate(R.layout.layout_right_menu, slidingMenu, false);
@@ -64,11 +62,6 @@ public class MainActivity extends AppCompatActivity {
 
         //setting data for right listview
         setMenuListViewAdapter();
-
-        //replace main fragment when first create activity
-        MainFragment fragment = new MainFragment();
-        currentFragment = fragment;
-        replaceFragment(fragment);
 
         //handling right listview click listener
         slidingListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -94,6 +87,14 @@ public class MainActivity extends AppCompatActivity {
                 toggleSlidingMenu();
             }
         });
+
+        //replace main fragment when first create activity
+        MainFragment fragment = new MainFragment();
+        FragmentManager fm = getFragmentManager();
+        FragmentTransaction ft = fm.beginTransaction();
+        ft.replace(R.id.main_view, fragment);
+        ft.commit();
+        currentFragment = fragment;
     }
 
     private void setMenuListViewAdapter() {
